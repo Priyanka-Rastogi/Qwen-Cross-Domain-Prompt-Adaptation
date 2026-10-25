@@ -1,0 +1,355 @@
+{
+  "config": {
+    "name": "mini_check",
+    "seeds": [
+      0
+    ],
+    "data_dir": "data",
+    "results_dir": "results/mini_check",
+    "cache_path": "artifacts/cache/mini_check_cache.jsonl",
+    "batch_size": 16,
+    "max_instruction_candidates": 3,
+    "instruction_generation_attempts": 8,
+    "max_demo_sets_d": 3,
+    "run_target_eval": true,
+    "target_test_limit": 20
+  },
+  "A": {
+    "condition": "A",
+    "seed_invariant": true,
+    "instruction": "Classify the sentiment of the following text as positive or negative. Respond with exactly one word: positive or negative.",
+    "source_test": {
+      "metrics": {
+        "n": 500,
+        "accuracy": 0.922,
+        "macro_f1": 0.9227210294223958,
+        "macro_precision": 0.9272317958020212,
+        "macro_recall": 0.9219999999999999,
+        "per_class": {
+          "negative": {
+            "precision": 0.8897058823529411,
+            "recall": 0.968,
+            "f1": 0.9272030651340997,
+            "support": 250
+          },
+          "positive": {
+            "precision": 0.9647577092511013,
+            "recall": 0.876,
+            "f1": 0.9182389937106918,
+            "support": 250
+          }
+        },
+        "confusion_matrix": {
+          "negative": {
+            "pred_negative": 242,
+            "pred_positive": 8,
+            "pred_invalid": 0
+          },
+          "positive": {
+            "pred_negative": 30,
+            "pred_positive": 219,
+            "pred_invalid": 1
+          }
+        },
+        "invalid_count": 1,
+        "invalid_rate": 0.002
+      },
+      "cost": {
+        "phase": "A_final_source_test",
+        "wall_clock_seconds": 15.414232179522514,
+        "model_invocations": 32,
+        "examples_classified": 500,
+        "input_tokens": 119888,
+        "output_tokens": 1000,
+        "cache_hits": 0,
+        "cache_misses": 500,
+        "peak_allocated_bytes": 17608678912,
+        "peak_reserved_bytes": 17941135360
+      }
+    },
+    "target_test": {
+      "metrics": {
+        "n": 20,
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "macro_precision": 1.0,
+        "macro_recall": 1.0,
+        "per_class": {
+          "negative": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 10
+          },
+          "positive": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 10
+          }
+        },
+        "confusion_matrix": {
+          "negative": {
+            "pred_negative": 10,
+            "pred_positive": 0,
+            "pred_invalid": 0
+          },
+          "positive": {
+            "pred_negative": 0,
+            "pred_positive": 10,
+            "pred_invalid": 0
+          }
+        },
+        "invalid_count": 0,
+        "invalid_rate": 0.0
+      },
+      "cost": {
+        "phase": "A_final_target_test",
+        "wall_clock_seconds": 0.30405518412590027,
+        "model_invocations": 2,
+        "examples_classified": 20,
+        "input_tokens": 1772,
+        "output_tokens": 40,
+        "cache_hits": 0,
+        "cache_misses": 20,
+        "peak_allocated_bytes": 16887028736,
+        "peak_reserved_bytes": 18018729984
+      }
+    }
+  },
+  "per_seed": {},
+  "B": {
+    "source_test_aggregate": {
+      "accuracy": {
+        "mean": 0.92,
+        "std": 0.0,
+        "values": [
+          0.92
+        ]
+      },
+      "macro_f1": {
+        "mean": 0.9217632515226437,
+        "std": 0.0,
+        "values": [
+          0.9217632515226437
+        ]
+      },
+      "macro_precision": {
+        "mean": 0.9254514535589926,
+        "std": 0.0,
+        "values": [
+          0.9254514535589926
+        ]
+      },
+      "macro_recall": {
+        "mean": 0.9199999999999999,
+        "std": 0.0,
+        "values": [
+          0.9199999999999999
+        ]
+      },
+      "invalid_rate": {
+        "mean": 0.004,
+        "std": 0.0,
+        "values": [
+          0.004
+        ]
+      },
+      "n_seeds": 1
+    },
+    "target_test_aggregate": {
+      "accuracy": {
+        "mean": 1.0,
+        "std": 0.0,
+        "values": [
+          1.0
+        ]
+      },
+      "macro_f1": {
+        "mean": 1.0,
+        "std": 0.0,
+        "values": [
+          1.0
+        ]
+      },
+      "macro_precision": {
+        "mean": 1.0,
+        "std": 0.0,
+        "values": [
+          1.0
+        ]
+      },
+      "macro_recall": {
+        "mean": 1.0,
+        "std": 0.0,
+        "values": [
+          1.0
+        ]
+      },
+      "invalid_rate": {
+        "mean": 0.0,
+        "std": 0.0,
+        "values": [
+          0.0
+        ]
+      },
+      "n_seeds": 1
+    }
+  },
+  "C": {
+    "source_test_aggregate": {
+      "accuracy": {
+        "mean": 0.912,
+        "std": 0.0,
+        "values": [
+          0.912
+        ]
+      },
+      "macro_f1": {
+        "mean": 0.9141246684350133,
+        "std": 0.0,
+        "values": [
+          0.9141246684350133
+        ]
+      },
+      "macro_precision": {
+        "mean": 0.9252831808724943,
+        "std": 0.0,
+        "values": [
+          0.9252831808724943
+        ]
+      },
+      "macro_recall": {
+        "mean": 0.9119999999999999,
+        "std": 0.0,
+        "values": [
+          0.9119999999999999
+        ]
+      },
+      "invalid_rate": {
+        "mean": 0.006,
+        "std": 0.0,
+        "values": [
+          0.006
+        ]
+      },
+      "n_seeds": 1
+    },
+    "target_test_aggregate": {
+      "accuracy": {
+        "mean": 0.8,
+        "std": 0.0,
+        "values": [
+          0.8
+        ]
+      },
+      "macro_f1": {
+        "mean": 0.875,
+        "std": 0.0,
+        "values": [
+          0.875
+        ]
+      },
+      "macro_precision": {
+        "mean": 1.0,
+        "std": 0.0,
+        "values": [
+          1.0
+        ]
+      },
+      "macro_recall": {
+        "mean": 0.8,
+        "std": 0.0,
+        "values": [
+          0.8
+        ]
+      },
+      "invalid_rate": {
+        "mean": 0.2,
+        "std": 0.0,
+        "values": [
+          0.2
+        ]
+      },
+      "n_seeds": 1
+    }
+  },
+  "D": {
+    "source_test_aggregate": {
+      "accuracy": {
+        "mean": 0.932,
+        "std": 0.0,
+        "values": [
+          0.932
+        ]
+      },
+      "macro_f1": {
+        "mean": 0.9354395604395604,
+        "std": 0.0,
+        "values": [
+          0.9354395604395604
+        ]
+      },
+      "macro_precision": {
+        "mean": 0.9426417568010488,
+        "std": 0.0,
+        "values": [
+          0.9426417568010488
+        ]
+      },
+      "macro_recall": {
+        "mean": 0.9319999999999999,
+        "std": 0.0,
+        "values": [
+          0.9319999999999999
+        ]
+      },
+      "invalid_rate": {
+        "mean": 0.008,
+        "std": 0.0,
+        "values": [
+          0.008
+        ]
+      },
+      "n_seeds": 1
+    },
+    "target_test_aggregate": {
+      "accuracy": {
+        "mean": 0.9,
+        "std": 0.0,
+        "values": [
+          0.9
+        ]
+      },
+      "macro_f1": {
+        "mean": 0.9444444444444444,
+        "std": 0.0,
+        "values": [
+          0.9444444444444444
+        ]
+      },
+      "macro_precision": {
+        "mean": 1.0,
+        "std": 0.0,
+        "values": [
+          1.0
+        ]
+      },
+      "macro_recall": {
+        "mean": 0.9,
+        "std": 0.0,
+        "values": [
+          0.9
+        ]
+      },
+      "invalid_rate": {
+        "mean": 0.1,
+        "std": 0.0,
+        "values": [
+          0.1
+        ]
+      },
+      "n_seeds": 1
+    }
+  }
+}

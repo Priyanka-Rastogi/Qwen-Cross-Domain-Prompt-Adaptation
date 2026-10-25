@@ -1,0 +1,28 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|                                                                                                                                   | 0/399 [00:00<?, ?it/s]Loading weights:   0%|▎                                                                                                                          | 1/399 [00:00<01:05,  6.08it/s]Loading weights:   1%|▌                                                                                                                          | 2/399 [00:00<01:11,  5.55it/s]Loading weights:   2%|██▍                                                                                                                        | 8/399 [00:00<00:23, 16.37it/s]Loading weights:  15%|██████████████████▏                                                                                                      | 60/399 [00:00<00:02, 134.37it/s]Loading weights:  20%|████████████████████████▌                                                                                                | 81/399 [00:00<00:02, 153.41it/s]Loading weights:  25%|██████████████████████████████▍                                                                                         | 101/399 [00:00<00:01, 163.99it/s]Loading weights:  30%|████████████████████████████████████▍                                                                                   | 121/399 [00:01<00:01, 164.18it/s]Loading weights:  35%|██████████████████████████████████████████                                                                              | 140/399 [00:01<00:01, 165.11it/s]Loading weights:  40%|███████████████████████████████████████████████▌                                                                        | 158/399 [00:01<00:01, 124.73it/s]Loading weights:  50%|███████████████████████████████████████████████████████████▊                                                            | 199/399 [00:01<00:01, 177.27it/s]Loading weights:  55%|██████████████████████████████████████████████████████████████████▏                                                     | 220/399 [00:01<00:01, 171.47it/s]Loading weights:  60%|███████████████████████████████████████████████████████████████████████▉                                                | 239/399 [00:01<00:01, 147.90it/s]Loading weights:  66%|███████████████████████████████████████████████████████████████████████████████                                         | 263/399 [00:01<00:00, 155.75it/s]Loading weights:  75%|██████████████████████████████████████████████████████████████████████████████████████████▌                             | 301/399 [00:02<00:00, 204.37it/s]Loading weights:  81%|█████████████████████████████████████████████████████████████████████████████████████████████████▍                      | 324/399 [00:02<00:00, 188.61it/s]Loading weights:  86%|███████████████████████████████████████████████████████████████████████████████████████████████████████▊                | 345/399 [00:02<00:00, 177.99it/s]Loading weights:  92%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████          | 366/399 [00:02<00:00, 167.49it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 399/399 [00:02<00:00, 154.96it/s]
+The following generation flags are not valid and may be ignored: ['top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+[model_loading] 5.2s, revision=b968826d9c46dd6066d109eabc6255188de91218
+[A] source_test macro_f1=0.9227 accuracy=0.9220
+
+===== SEED 0 =====
+[seed0] instruction pool size = 8
+[B/seed0] source_test macro_f1=0.9238
+[C/seed0] source_test macro_f1=0.9141
+[D/seed0] evaluating 80 instruction x demo-set combinations on dev
+[D/seed0] source_test macro_f1=0.9391
+
+===== SEED 1 =====
+[seed1] instruction pool size = 8
+[B/seed1] source_test macro_f1=0.9258
+[C/seed1] source_test macro_f1=0.9409
+[D/seed1] evaluating 80 instruction x demo-set combinations on dev
+[D/seed1] source_test macro_f1=0.9433
+
+===== SEED 2 =====
+[seed2] instruction pool size = 8
+[B/seed2] source_test macro_f1=0.9238
+[C/seed2] source_test macro_f1=0.9438
+[D/seed2] evaluating 80 instruction x demo-set combinations on dev
+[D/seed2] source_test macro_f1=0.9398
+
+Wrote summary to /workspace/qwen_cross_domain_prompt_adaptation/results/metrics/summary.json

@@ -1,0 +1,108 @@
+{
+  "condition": "C",
+  "seed": 2,
+  "demonstration_ids": [
+    "imdb_train_10776",
+    "imdb_train_14452",
+    "imdb_train_12045",
+    "imdb_train_19432"
+  ],
+  "source_test": {
+    "metrics": {
+      "n": 500,
+      "accuracy": 0.942,
+      "macro_f1": 0.943787303309821,
+      "macro_precision": 0.9470835692905104,
+      "macro_recall": 0.942,
+      "per_class": {
+        "negative": {
+          "precision": 0.9239543726235742,
+          "recall": 0.972,
+          "f1": 0.9473684210526315,
+          "support": 250
+        },
+        "positive": {
+          "precision": 0.9702127659574468,
+          "recall": 0.912,
+          "f1": 0.9402061855670103,
+          "support": 250
+        }
+      },
+      "confusion_matrix": {
+        "negative": {
+          "pred_negative": 243,
+          "pred_positive": 7,
+          "pred_invalid": 0
+        },
+        "positive": {
+          "pred_negative": 20,
+          "pred_positive": 228,
+          "pred_invalid": 2
+        }
+      },
+      "invalid_count": 2,
+      "invalid_rate": 0.004
+    },
+    "cost": {
+      "phase": "C_final_source_test_seed2",
+      "wall_clock_seconds": 67.58324653096497,
+      "model_invocations": 32,
+      "examples_classified": 500,
+      "input_tokens": 576888,
+      "output_tokens": 1000,
+      "cache_hits": 0,
+      "cache_misses": 500,
+      "peak_allocated_bytes": 21350939648,
+      "peak_reserved_bytes": 28556918784
+    }
+  },
+  "target_test": {
+    "metrics": {
+      "n": 873,
+      "accuracy": 0.5750286368843069,
+      "macro_f1": 0.7313628899835797,
+      "macro_precision": 0.9377104377104377,
+      "macro_recall": 0.641323606044815,
+      "per_class": {
+        "negative": {
+          "precision": 0.8754208754208754,
+          "recall": 0.858085808580858,
+          "f1": 0.8666666666666667,
+          "support": 303
+        },
+        "positive": {
+          "precision": 1.0,
+          "recall": 0.4245614035087719,
+          "f1": 0.5960591133004927,
+          "support": 570
+        }
+      },
+      "confusion_matrix": {
+        "negative": {
+          "pred_negative": 260,
+          "pred_positive": 0,
+          "pred_invalid": 43
+        },
+        "positive": {
+          "pred_negative": 37,
+          "pred_positive": 242,
+          "pred_invalid": 291
+        }
+      },
+      "invalid_count": 334,
+      "invalid_rate": 0.38258877434135163
+    },
+    "cost": {
+      "phase": "C_final_target_test_seed2",
+      "wall_clock_seconds": 96.70954803936183,
+      "model_invocations": 55,
+      "examples_classified": 873,
+      "input_tokens": 865356,
+      "output_tokens": 1746,
+      "cache_hits": 0,
+      "cache_misses": 873,
+      "peak_allocated_bytes": 20662667776,
+      "peak_reserved_bytes": 28556918784
+    }
+  }
+}

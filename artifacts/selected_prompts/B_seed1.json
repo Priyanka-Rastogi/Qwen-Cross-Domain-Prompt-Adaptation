@@ -1,0 +1,27 @@
+{
+  "condition": "B",
+  "seed": 1,
+  "instruction": "Determine if the text conveys a generally positive or negative opinion about the subject being discussed. Respond with exactly one word: positive or negative.",
+  "instruction_hash": "00b4b7ecdac0e9c05cd5fb19821ca09234d1c108ae40e01dae83f012761cf21a",
+  "demonstration_ids": null,
+  "demonstrations_content_hash": null,
+  "selection_score": {
+    "candidate_id": "B_instr5",
+    "macro_f1": 0.9097744360902256,
+    "accuracy": 0.91,
+    "avg_prompt_tokens": 255.9,
+    "cost": {
+      "phase": "B_dev_seed1",
+      "wall_clock_seconds": 3.0611053500324488,
+      "model_invocations": 7,
+      "examples_classified": 100,
+      "input_tokens": 25590,
+      "output_tokens": 200,
+      "cache_hits": 0,
+      "cache_misses": 100,
+      "peak_allocated_bytes": 17629980160,
+      "peak_reserved_bytes": 28556918784
+    }
+  },
+  "frozen_at_utc": "2026-10-21T06:52:36Z"
+}

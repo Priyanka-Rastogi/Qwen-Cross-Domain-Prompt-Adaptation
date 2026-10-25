@@ -1,0 +1,27 @@
+{
+  "condition": "B",
+  "seed": 0,
+  "instruction": "Determine if the text expresses a favorable or unfavorable opinion about the subject being discussed. Respond with exactly one word: positive or negative.",
+  "instruction_hash": "9cfd07191ec69e3bfc5ae12bd1937f19bccea8c0aae5e596e636eb2bb1e49bd3",
+  "demonstration_ids": null,
+  "demonstrations_content_hash": null,
+  "selection_score": {
+    "candidate_id": "B_instr3",
+    "macro_f1": 0.9198717948717949,
+    "accuracy": 0.92,
+    "avg_prompt_tokens": 253.9,
+    "cost": {
+      "phase": "B_dev_seed0",
+      "wall_clock_seconds": 3.0517078060656786,
+      "model_invocations": 7,
+      "examples_classified": 100,
+      "input_tokens": 25390,
+      "output_tokens": 200,
+      "cache_hits": 0,
+      "cache_misses": 100,
+      "peak_allocated_bytes": 17626555904,
+      "peak_reserved_bytes": 18301845504
+    }
+  },
+  "frozen_at_utc": "2026-10-21T06:27:06Z"
+}

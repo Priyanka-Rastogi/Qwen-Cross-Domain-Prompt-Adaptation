@@ -1,0 +1,11 @@
+id,label,pred,raw_output,valid,prompt_tokens,output_tokens,truncated_demo,truncated_query,from_cache
+imdb_test_10640,0,0,negative,True,170,2,False,False,True
+imdb_test_2193,0,0,negative,True,196,2,False,False,True
+imdb_test_10355,0,0,Negative,True,163,2,False,False,True
+imdb_test_12015,0,0,negative,True,298,2,False,True,True
+imdb_test_10451,0,0,negative,True,102,2,False,False,True
+imdb_test_17794,1,0,negative,True,297,2,False,True,True
+imdb_test_21746,1,1,positive,True,201,2,False,False,True
+imdb_test_14978,1,1,positive,True,297,2,False,True,True
+imdb_test_18620,1,0,negative,True,84,2,False,False,True
+imdb_test_13582,1,1,positive,True,239,2,False,False,True

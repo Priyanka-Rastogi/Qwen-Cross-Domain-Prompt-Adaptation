@@ -1,0 +1,198 @@
+{
+  "config": {
+    "name": "smoke",
+    "seeds": [
+      0
+    ],
+    "data_dir": "data",
+    "results_dir": "results/smoke",
+    "cache_path": "artifacts/cache/smoke_cache.jsonl",
+    "batch_size": 4,
+    "max_instruction_candidates": 2,
+    "instruction_generation_attempts": 6,
+    "max_demo_sets_d": 2,
+    "run_target_eval": false,
+    "source_train_limit": 20,
+    "source_validation_limit": 10,
+    "source_test_limit": 10
+  },
+  "A": {
+    "condition": "A",
+    "seed_invariant": true,
+    "instruction": "Classify the sentiment of the following text as positive or negative. Respond with exactly one word: positive or negative.",
+    "source_test": {
+      "metrics": {
+        "n": 10,
+        "accuracy": 0.8,
+        "macro_f1": 0.7916666666666667,
+        "macro_precision": 0.8571428571428572,
+        "macro_recall": 0.8,
+        "per_class": {
+          "negative": {
+            "precision": 0.7142857142857143,
+            "recall": 1.0,
+            "f1": 0.8333333333333334,
+            "support": 5
+          },
+          "positive": {
+            "precision": 1.0,
+            "recall": 0.6,
+            "f1": 0.75,
+            "support": 5
+          }
+        },
+        "confusion_matrix": {
+          "negative": {
+            "pred_negative": 5,
+            "pred_positive": 0,
+            "pred_invalid": 0
+          },
+          "positive": {
+            "pred_negative": 2,
+            "pred_positive": 3,
+            "pred_invalid": 0
+          }
+        },
+        "invalid_count": 0,
+        "invalid_rate": 0.0
+      },
+      "cost": {
+        "phase": "A_final_source_test",
+        "wall_clock_seconds": 0.0,
+        "model_invocations": 0,
+        "examples_classified": 10,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "cache_hits": 10,
+        "cache_misses": 0,
+        "peak_allocated_bytes": 0,
+        "peak_reserved_bytes": 0
+      }
+    },
+    "target_test": null
+  },
+  "per_seed": {},
+  "B": {
+    "source_test_aggregate": {
+      "accuracy": {
+        "mean": 0.8,
+        "std": 0.0,
+        "values": [
+          0.8
+        ]
+      },
+      "macro_f1": {
+        "mean": 0.7916666666666667,
+        "std": 0.0,
+        "values": [
+          0.7916666666666667
+        ]
+      },
+      "macro_precision": {
+        "mean": 0.8571428571428572,
+        "std": 0.0,
+        "values": [
+          0.8571428571428572
+        ]
+      },
+      "macro_recall": {
+        "mean": 0.8,
+        "std": 0.0,
+        "values": [
+          0.8
+        ]
+      },
+      "invalid_rate": {
+        "mean": 0.0,
+        "std": 0.0,
+        "values": [
+          0.0
+        ]
+      },
+      "n_seeds": 1
+    },
+    "target_test_aggregate": null
+  },
+  "C": {
+    "source_test_aggregate": {
+      "accuracy": {
+        "mean": 0.8,
+        "std": 0.0,
+        "values": [
+          0.8
+        ]
+      },
+      "macro_f1": {
+        "mean": 0.7916666666666667,
+        "std": 0.0,
+        "values": [
+          0.7916666666666667
+        ]
+      },
+      "macro_precision": {
+        "mean": 0.8571428571428572,
+        "std": 0.0,
+        "values": [
+          0.8571428571428572
+        ]
+      },
+      "macro_recall": {
+        "mean": 0.8,
+        "std": 0.0,
+        "values": [
+          0.8
+        ]
+      },
+      "invalid_rate": {
+        "mean": 0.0,
+        "std": 0.0,
+        "values": [
+          0.0
+        ]
+      },
+      "n_seeds": 1
+    },
+    "target_test_aggregate": null
+  },
+  "D": {
+    "source_test_aggregate": {
+      "accuracy": {
+        "mean": 0.8,
+        "std": 0.0,
+        "values": [
+          0.8
+        ]
+      },
+      "macro_f1": {
+        "mean": 0.7916666666666667,
+        "std": 0.0,
+        "values": [
+          0.7916666666666667
+        ]
+      },
+      "macro_precision": {
+        "mean": 0.8571428571428572,
+        "std": 0.0,
+        "values": [
+          0.8571428571428572
+        ]
+      },
+      "macro_recall": {
+        "mean": 0.8,
+        "std": 0.0,
+        "values": [
+          0.8
+        ]
+      },
+      "invalid_rate": {
+        "mean": 0.0,
+        "std": 0.0,
+        "values": [
+          0.0
+        ]
+      },
+      "n_seeds": 1
+    },
+    "target_test_aggregate": null
+  }
+}

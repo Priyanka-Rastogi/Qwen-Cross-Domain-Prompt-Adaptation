@@ -1,0 +1,15 @@
+# Tiny source-only smoke test: validates the full pipeline end-to-end cheaply.
+# Small candidate pool, small dev sample, 2 instructions, 2 demo sets, NO target eval.
+name: smoke
+seeds: [0]
+data_dir: data
+results_dir: results/smoke
+cache_path: artifacts/cache/smoke_cache.jsonl
+batch_size: 4
+max_instruction_candidates: 2
+instruction_generation_attempts: 6
+max_demo_sets_d: 2
+run_target_eval: false
+source_train_limit: 20
+source_validation_limit: 10
+source_test_limit: 10

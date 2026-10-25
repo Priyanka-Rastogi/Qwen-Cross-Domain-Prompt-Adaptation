@@ -1,0 +1,7 @@
+{"ts": 1792563479.5305922, "event": "model_loaded", "phase": "model_loading", "wall_clock_seconds": 5.565220123156905, "model_invocations": 0, "examples_classified": 0, "input_tokens": 0, "output_tokens": 0, "cache_hits": 0, "cache_misses": 0, "peak_allocated_bytes": 0, "peak_reserved_bytes": 0}
+{"ts": 1792563479.5697055, "event": "condition_A_done", "accuracy_source": 0.8}
+{"ts": 1792563480.5907037, "event": "instruction_proposal_done", "seed": 0, "n_candidates": 2}
+{"ts": 1792563480.6249936, "event": "condition_B_done", "seed": 0, "accuracy_source": 0.8}
+{"ts": 1792563482.0685015, "event": "condition_C_done", "seed": 0, "accuracy_source": 0.8}
+{"ts": 1792563487.7108414, "event": "condition_D_done", "seed": 0, "accuracy_source": 0.8}
+{"ts": 1792563504.2030873, "event": "model_loaded", "phase": "model_loading", "wall_clock_seconds": 5.254740490578115, "model_invocations": 0, "examples_classified": 0, "input_tokens": 0, "output_tokens": 0, "cache_hits": 0, "cache_misses": 0, "peak_allocated_bytes": 0, "peak_reserved_bytes": 0}

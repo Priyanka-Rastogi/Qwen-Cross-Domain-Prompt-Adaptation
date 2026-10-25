@@ -1,0 +1,32 @@
+{
+  "condition": "D",
+  "seed": 0,
+  "instruction": "Determine if the text expresses a generally positive or negative opinion about the subject being discussed. Respond with exactly one word: positive or negative.",
+  "instruction_hash": "4c54e4efd8976a8932668438c6909fc797eadab56555534234bfa9efc9474617",
+  "demonstration_ids": [
+    "imdb_train_7372",
+    "imdb_train_14368",
+    "imdb_train_883",
+    "imdb_train_19228"
+  ],
+  "demonstrations_content_hash": "4333d7f693fde3c073cdfd3df8448c69d66f031aadd9f1f4ba359c4b02313475",
+  "selection_score": {
+    "candidate_id": "D_instr2_demo5",
+    "macro_f1": 0.944815039417829,
+    "accuracy": 0.94,
+    "avg_prompt_tokens": 1214.9,
+    "cost": {
+      "phase": "D_dev_seed0",
+      "wall_clock_seconds": 14.193527740426362,
+      "model_invocations": 7,
+      "examples_classified": 100,
+      "input_tokens": 121490,
+      "output_tokens": 200,
+      "cache_hits": 0,
+      "cache_misses": 100,
+      "peak_allocated_bytes": 21559285760,
+      "peak_reserved_bytes": 27009220608
+    }
+  },
+  "frozen_at_utc": "2026-10-21T06:49:22Z"
+}

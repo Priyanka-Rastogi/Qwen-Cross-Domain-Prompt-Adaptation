@@ -1,0 +1,13 @@
+# Full bounded pilot: 3 seeds, up to 8 instruction candidates, up to 10 demo
+# sets for D (<= 80 instruction x demo-set combinations per seed), full source
+# and target test evaluation.
+name: pilot
+seeds: [0, 1, 2]
+data_dir: data
+results_dir: results
+cache_path: artifacts/cache/eval_cache.jsonl
+batch_size: 16
+max_instruction_candidates: 8
+instruction_generation_attempts: 16
+max_demo_sets_d: 10
+run_target_eval: true

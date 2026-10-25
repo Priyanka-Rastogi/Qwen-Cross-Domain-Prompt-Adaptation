@@ -1,0 +1,16 @@
+# Installed into .venv (--system-site-packages, reusing the host's NVIDIA-built
+# torch rather than reinstalling it). `datasets` required overriding the host's
+# global PIP_CONSTRAINT (see README.md "Environment setup").
+#
+# torch is intentionally NOT pinned here: this project reuses whatever
+# NVIDIA-container torch build is already on the host (verified compatible:
+# torch==2.7.0a0+7c8ec84dab.nv25.3, CUDA 12.8). Do not `pip install torch` from
+# this file on a different host; verify GPU/CUDA compatibility first.
+transformers==5.3.0
+datasets==3.6.0
+accelerate==1.15.0
+scikit-learn==1.6.1
+pandas==2.2.3
+PyYAML==6.0.2
+pytest==8.1.1
+huggingface_hub>=0.25

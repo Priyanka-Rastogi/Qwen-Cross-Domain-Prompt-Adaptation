@@ -1,0 +1,14 @@
+{"ts": 1792563970.0071385, "event": "model_loaded", "phase": "model_loading", "wall_clock_seconds": 5.2173831621184945, "model_invocations": 0, "examples_classified": 0, "input_tokens": 0, "output_tokens": 0, "cache_hits": 0, "cache_misses": 0, "peak_allocated_bytes": 0, "peak_reserved_bytes": 0}
+{"ts": 1792563996.9030325, "event": "condition_A_done", "accuracy_source": 0.922}
+{"ts": 1792564001.0137138, "event": "instruction_proposal_done", "seed": 0, "n_candidates": 8}
+{"ts": 1792564054.1900387, "event": "condition_B_done", "seed": 0, "accuracy_source": 0.922}
+{"ts": 1792564241.2860034, "event": "condition_C_done", "seed": 0, "accuracy_source": 0.912}
+{"ts": 1792565541.8595943, "event": "condition_D_done", "seed": 0, "accuracy_source": 0.926}
+{"ts": 1792565546.0156496, "event": "instruction_proposal_done", "seed": 1, "n_candidates": 8}
+{"ts": 1792565583.2486677, "event": "condition_B_done", "seed": 1, "accuracy_source": 0.924}
+{"ts": 1792565748.0531507, "event": "condition_C_done", "seed": 1, "accuracy_source": 0.94}
+{"ts": 1792566976.4030218, "event": "condition_D_done", "seed": 1, "accuracy_source": 0.934}
+{"ts": 1792566980.3557563, "event": "instruction_proposal_done", "seed": 2, "n_candidates": 8}
+{"ts": 1792566988.0006979, "event": "condition_B_done", "seed": 2, "accuracy_source": 0.922}
+{"ts": 1792567157.8258035, "event": "condition_C_done", "seed": 2, "accuracy_source": 0.942}
+{"ts": 1792568393.9166512, "event": "condition_D_done", "seed": 2, "accuracy_source": 0.936}

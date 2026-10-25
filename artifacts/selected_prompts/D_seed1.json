@@ -1,0 +1,32 @@
+{
+  "condition": "D",
+  "seed": 1,
+  "instruction": "Classify the sentiment of the following text as positive or negative. Respond with exactly one word: positive or negative.",
+  "instruction_hash": "528efe0cd51d2bd84bcdfb757abcf87235d7675b5842df6bedaaaef986499549",
+  "demonstration_ids": [
+    "imdb_train_10645",
+    "imdb_train_15009",
+    "imdb_train_9815",
+    "imdb_train_23934"
+  ],
+  "demonstrations_content_hash": "58dced0440c40f828f14cc8c4760ab2c9f44268c7eb7f10d3d60066ff32b86b8",
+  "selection_score": {
+    "candidate_id": "D_instr0_demo5",
+    "macro_f1": 0.959983993597439,
+    "accuracy": 0.96,
+    "avg_prompt_tokens": 1134.9,
+    "cost": {
+      "phase": "D_dev_seed1",
+      "wall_clock_seconds": 13.259147191420197,
+      "model_invocations": 7,
+      "examples_classified": 100,
+      "input_tokens": 113490,
+      "output_tokens": 200,
+      "cache_hits": 0,
+      "cache_misses": 100,
+      "peak_allocated_bytes": 21229789184,
+      "peak_reserved_bytes": 28556918784
+    }
+  },
+  "frozen_at_utc": "2026-10-21T07:13:31Z"
+}

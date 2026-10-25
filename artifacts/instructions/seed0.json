@@ -1,0 +1,92 @@
+{
+  "seed": 0,
+  "proposal_prompt": "You are designing an instruction for a binary sentiment classifier that must work on text from ANY domain (it will be used on text you have not seen). Below are a few labeled examples for calibration only.\n\nText: In 1993, \"the visitors\" was an enormous hit in France. So, the sequence was inevitable and unfortunately, this sequence ranks among the worst ones ever made. <br /><br />This is a movie that doesn't keep its promises. Indeed, it's supposed to tell a sole story. Jean Reno must go in the twentieth century and take Christian Clavier back in the Middle Ages so that time can normally follow its course. The problem is that Clavier feels completely at ease in the world of the twentieth century, and so make him get back in the Middles Ages is rather hard... Instead of this, the movie goes on several o\nSentiment: negative\n\nText: Chris Rock, apparently desperate for a cozy star-vehicle which would cross his appeal over to white and mainstream black audiences, updates the hit 1978 comedy \"Heaven Can Wait\" with an urban agenda. He plays a struggling comedian involved in a car accident who has his soul removed too soon from his body--consequently, his angels must find another body to place him in, and can only come up with that of a white businessman. Rewriting a movie as bland and sentimental as \"Heaven Can Wait\" only shows that Rock's eye was on the box-office (this was strictly a corporate move organized by the most me\nSentiment: negative\n\nText: Just when you thought it was safe to go back into the water...<br /><br />Another computer generated mutant croc on the prowl for human lunchmeat, let loose by another one of those facilities conducting mad science. Gereco Biotech company is fooling around with growth hormone research, accidentally releasing a baby crocodile which is evolving at an accelerating rate.<br /><br />B-movie cast add a deal of fun to this run of the mill \"genetic mistake monster movie\". Costas Mandylor evokes Mick Dundee, Aussie accent, hat, big ass knife, the works, as a croc specialist hired by Gereco executive Jo\nSentiment: negative\n\nText: You could stage a version of Charles Dickens' \"A Christmas Carol\" with sock puppets and I'll probably watch it. Ever since I was a child, this has been one of my favorite stories. Maybe it's the idea that there is good in everyone, and that therefore no one is beyond redemption, that appeals to me, but for whatever reason I never miss an opportunity to watch one of the many screen adaptations of this timeless classic when they're on TV as they inevitably are this time of year.<br /><br />What makes this version really stand out is the somber gravitas that the cast bring to their respective rol\nSentiment: positive\n\nText: I had a heck of a good time viewing this picture, and was splendidly surprised at its more erudite features. First off, the film is undeniably cheaply-made with its cardboard sets, limited settings, and creative scientific props. The acting ranges from very poor(the two strippers), barely professional(Herb Evers as the leading man), gothic overstatement(Leslie Daniels as the assistant Kurt)to first-rate with Virginia Leith in the title role as the headless victim alive against her will for the benefit of science and her fiancee's lustful passions. The scripting though is very good and the dial\nSentiment: positive\n\nText: If you are viewing this show for the first time, you may start wondering if you are in an alternate reality. Colorful and imaginative characters? Entertaining dialogue? Plots that seem to have some depth to them, even creating atmospheres of suspense and drama at times? I mean, this is a syndicated children's show right? This is the same venue that has brought kids such drek as \"Pokemon\", \"Pepper Ann\", \"Mighty Morphin Power Rangers\", and \"VR Troopers\" (please note that three of the titles mentioned above are crass Japanese exports, courtesy of the Fox Network and Saban Entertainment). Don't wo\nSentiment: positive\n\nWrite ONE short, general instruction sentence (no more than 25 words) that tells a model to classify a piece of text as expressing positive or negative sentiment. The instruction must be domain-neutral: do NOT mention movies, films, finance, stocks, or any other specific subject matter. Do NOT include an output-format directive (e.g. do not say how to respond); only describe the classification task itself. Output only the instruction sentence, nothing else.",
+  "sampled_example_ids": [
+    "imdb_train_4870",
+    "imdb_train_3834",
+    "imdb_train_8616",
+    "imdb_train_13475",
+    "imdb_train_19677",
+    "imdb_train_24439"
+  ],
+  "raw_generations": [
+    {
+      "attempt": 0,
+      "generation_seed": 0,
+      "raw_text": "Determine if the text conveys a generally positive or negative attitude towards the subject being discussed.",
+      "parsed": "Determine if the text conveys a generally positive or negative attitude towards the subject being discussed.",
+      "status": "accepted"
+    },
+    {
+      "attempt": 1,
+      "generation_seed": 1,
+      "raw_text": "Determine if the text expresses a generally positive or negative opinion about the subject being discussed.",
+      "parsed": "Determine if the text expresses a generally positive or negative opinion about the subject being discussed.",
+      "status": "accepted"
+    },
+    {
+      "attempt": 2,
+      "generation_seed": 2,
+      "raw_text": "Determine if the text expresses a favorable or unfavorable opinion about the subject being discussed.",
+      "parsed": "Determine if the text expresses a favorable or unfavorable opinion about the subject being discussed.",
+      "status": "accepted"
+    },
+    {
+      "attempt": 3,
+      "generation_seed": 3,
+      "raw_text": "Determine if the text conveys a generally positive or negative opinion based on the overall tone and content expressed.",
+      "parsed": "Determine if the text conveys a generally positive or negative opinion based on the overall tone and content expressed.",
+      "status": "accepted"
+    },
+    {
+      "attempt": 4,
+      "generation_seed": 4,
+      "raw_text": "Determine if the text expresses a positive or negative sentiment based on the overall tone and content of the written expression.",
+      "parsed": "Determine if the text expresses a positive or negative sentiment based on the overall tone and content of the written expression.",
+      "status": "accepted"
+    },
+    {
+      "attempt": 5,
+      "generation_seed": 5,
+      "raw_text": "Determine if the text expresses a positive or negative sentiment based on the overall tone and content of the written expression.",
+      "parsed": "Determine if the text expresses a positive or negative sentiment based on the overall tone and content of the written expression.",
+      "status": "rejected: duplicate of an already-accepted candidate"
+    },
+    {
+      "attempt": 6,
+      "generation_seed": 6,
+      "raw_text": "Determine if the text expresses a positive or negative sentiment based on the overall tone and content of the writing.",
+      "parsed": "Determine if the text expresses a positive or negative sentiment based on the overall tone and content of the writing.",
+      "status": "accepted"
+    },
+    {
+      "attempt": 7,
+      "generation_seed": 7,
+      "raw_text": "Determine if the text conveys a positive or negative sentiment based on the overall tone and content of the written expression.",
+      "parsed": "Determine if the text conveys a positive or negative sentiment based on the overall tone and content of the written expression.",
+      "status": "accepted"
+    }
+  ],
+  "accepted_candidates": [
+    "Classify the sentiment of the following text as positive or negative. Respond with exactly one word: positive or negative.",
+    "Determine if the text conveys a generally positive or negative attitude towards the subject being discussed. Respond with exactly one word: positive or negative.",
+    "Determine if the text expresses a generally positive or negative opinion about the subject being discussed. Respond with exactly one word: positive or negative.",
+    "Determine if the text expresses a favorable or unfavorable opinion about the subject being discussed. Respond with exactly one word: positive or negative.",
+    "Determine if the text conveys a generally positive or negative opinion based on the overall tone and content expressed. Respond with exactly one word: positive or negative.",
+    "Determine if the text expresses a positive or negative sentiment based on the overall tone and content of the written expression. Respond with exactly one word: positive or negative.",
+    "Determine if the text expresses a positive or negative sentiment based on the overall tone and content of the writing. Respond with exactly one word: positive or negative.",
+    "Determine if the text conveys a positive or negative sentiment based on the overall tone and content of the written expression. Respond with exactly one word: positive or negative."
+  ],
+  "cost": {
+    "phase": "instruction_generation",
+    "wall_clock_seconds": 4.103035179898143,
+    "model_invocations": 8,
+    "examples_classified": 8,
+    "input_tokens": 7832,
+    "output_tokens": 176,
+    "cache_hits": 0,
+    "cache_misses": 0,
+    "peak_allocated_bytes": 16639265792,
+    "peak_reserved_bytes": 17943232512
+  }
+}
