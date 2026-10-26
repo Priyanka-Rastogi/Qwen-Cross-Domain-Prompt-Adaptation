@@ -1,0 +1,102 @@
+{
+  "A_source_test": {
+    "n_compared": 499,
+    "n_agree": 499,
+    "agreement_rate": 1.0
+  },
+  "A_target_test": {
+    "n_compared": 873,
+    "n_agree": 873,
+    "agreement_rate": 1.0
+  },
+  "B_seed0_source_test": {
+    "n_compared": 498,
+    "n_agree": 498,
+    "agreement_rate": 1.0
+  },
+  "B_seed0_target_test": {
+    "n_compared": 870,
+    "n_agree": 869,
+    "agreement_rate": 0.9988505747126437
+  },
+  "C_seed0_source_test": {
+    "n_compared": 497,
+    "n_agree": 497,
+    "agreement_rate": 1.0
+  },
+  "C_seed0_target_test": {
+    "n_compared": 527,
+    "n_agree": 527,
+    "agreement_rate": 1.0
+  },
+  "D_seed0_source_test": {
+    "n_compared": 486,
+    "n_agree": 485,
+    "agreement_rate": 0.9979423868312757
+  },
+  "D_seed0_target_test": {
+    "n_compared": 469,
+    "n_agree": 469,
+    "agreement_rate": 1.0
+  },
+  "B_seed1_source_test": {
+    "n_compared": 498,
+    "n_agree": 497,
+    "agreement_rate": 0.9979919678714859
+  },
+  "B_seed1_target_test": {
+    "n_compared": 873,
+    "n_agree": 873,
+    "agreement_rate": 1.0
+  },
+  "C_seed1_source_test": {
+    "n_compared": 499,
+    "n_agree": 499,
+    "agreement_rate": 1.0
+  },
+  "C_seed1_target_test": {
+    "n_compared": 633,
+    "n_agree": 632,
+    "agreement_rate": 0.9984202211690363
+  },
+  "D_seed1_source_test": {
+    "n_compared": 490,
+    "n_agree": 490,
+    "agreement_rate": 1.0
+  },
+  "D_seed1_target_test": {
+    "n_compared": 510,
+    "n_agree": 510,
+    "agreement_rate": 1.0
+  },
+  "B_seed2_source_test": {
+    "n_compared": 498,
+    "n_agree": 498,
+    "agreement_rate": 1.0
+  },
+  "B_seed2_target_test": {
+    "n_compared": 870,
+    "n_agree": 869,
+    "agreement_rate": 0.9988505747126437
+  },
+  "C_seed2_source_test": {
+    "n_compared": 498,
+    "n_agree": 497,
+    "agreement_rate": 0.9979919678714859
+  },
+  "C_seed2_target_test": {
+    "n_compared": 539,
+    "n_agree": 538,
+    "agreement_rate": 0.9981447124304267
+  },
+  "D_seed2_source_test": {
+    "n_compared": 496,
+    "n_agree": 495,
+    "agreement_rate": 0.9979838709677419
+  },
+  "D_seed2_target_test": {
+    "n_compared": 443,
+    "n_agree": 443,
+    "agreement_rate": 1.0
+  }
+}

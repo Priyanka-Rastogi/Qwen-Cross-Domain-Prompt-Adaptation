@@ -1,0 +1,38 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|                                                                                                                                   | 0/399 [00:00<?, ?it/s]Loading weights:   0%|▎                                                                                                                          | 1/399 [00:00<01:01,  6.52it/s]Loading weights:   1%|▌                                                                                                                          | 2/399 [00:00<01:07,  5.88it/s]Loading weights:   4%|████▉                                                                                                                     | 16/399 [00:00<00:09, 41.10it/s]Loading weights:  13%|███████████████▏                                                                                                         | 50/399 [00:00<00:02, 118.65it/s]Loading weights:  18%|█████████████████████▌                                                                                                   | 71/399 [00:00<00:02, 141.22it/s]Loading weights:  23%|███████████████████████████▉                                                                                             | 92/399 [00:00<00:01, 158.60it/s]Loading weights:  29%|██████████████████████████████████▎                                                                                     | 114/399 [00:00<00:01, 168.45it/s]Loading weights:  34%|████████████████████████████████████████▎                                                                               | 134/399 [00:01<00:01, 156.60it/s]Loading weights:  40%|████████████████████████████████████████████████                                                                        | 160/399 [00:01<00:01, 178.18it/s]Loading weights:  45%|█████████████████████████████████████████████████████▊                                                                  | 179/399 [00:01<00:01, 162.33it/s]Loading weights:  52%|██████████████████████████████████████████████████████████████▊                                                         | 209/399 [00:01<00:00, 194.79it/s]Loading weights:  58%|█████████████████████████████████████████████████████████████████████▏                                                  | 230/399 [00:01<00:00, 186.37it/s]Loading weights:  63%|███████████████████████████████████████████████████████████████████████████▏                                            | 250/399 [00:01<00:00, 159.14it/s]Loading weights:  68%|█████████████████████████████████████████████████████████████████████████████████▊                                      | 272/399 [00:01<00:00, 161.71it/s]Loading weights:  76%|██████████████████████████████████████████████████████████████████████████████████████████▊                             | 302/399 [00:02<00:00, 186.86it/s]Loading weights:  81%|█████████████████████████████████████████████████████████████████████████████████████████████████▍                      | 324/399 [00:02<00:00, 193.01it/s]Loading weights:  86%|███████████████████████████████████████████████████████████████████████████████████████████████████████▊                | 345/399 [00:02<00:00, 192.21it/s]Loading weights:  92%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████▍         | 367/399 [00:02<00:00, 191.30it/s]Loading weights:  97%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍   | 387/399 [00:02<00:00, 171.73it/s]Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 399/399 [00:02<00:00, 160.10it/s]
+[model_loading] 5.4s revision=b968826d9c46dd6066d109eabc6255188de91218
+[validation] 20 source-only samples scored. 20/20 had an originally-valid free-generation label; scoring agreed on 20/20.
+[validation] PASSED. Saved /workspace/qwen_cross_domain_prompt_adaptation/results/binary_label_scoring/validation_sample.json
+[A] src_acc=0.9240 macro_f1=0.9239  tgt_acc=0.9782 macro_f1=0.9763  (44.8s)
+[B_seed0] src_acc=0.9240 macro_f1=0.9239  tgt_acc=0.9805 macro_f1=0.9788  (46.4s)
+[C_seed0] src_acc=0.9160 macro_f1=0.9156  tgt_acc=0.9198 macro_f1=0.9153  (350.8s)
+[D_seed0] src_acc=0.9500 macro_f1=0.9500  tgt_acc=0.9542 macro_f1=0.9504  (337.1s)
+[B_seed1] src_acc=0.9240 macro_f1=0.9239  tgt_acc=0.9828 macro_f1=0.9813  (46.6s)
+[C_seed1] src_acc=0.9420 macro_f1=0.9420  tgt_acc=0.9450 macro_f1=0.9408  (311.0s)
+[D_seed1] src_acc=0.9520 macro_f1=0.9520  tgt_acc=0.9473 macro_f1=0.9435  (310.6s)
+[B_seed2] src_acc=0.9240 macro_f1=0.9239  tgt_acc=0.9805 macro_f1=0.9788  (0.7s)
+[C_seed2] src_acc=0.9480 macro_f1=0.9480  tgt_acc=0.8981 macro_f1=0.8934  (319.5s)
+[D_seed2] src_acc=0.9420 macro_f1=0.9420  tgt_acc=0.9530 macro_f1=0.9485  (320.8s)
+[agreement check, full scale]
+  A_source_test: 499/499 (100.00%)
+  A_target_test: 873/873 (100.00%)
+  B_seed0_source_test: 498/498 (100.00%)
+  B_seed0_target_test: 869/870 (99.89%)
+  C_seed0_source_test: 497/497 (100.00%)
+  C_seed0_target_test: 527/527 (100.00%)
+  D_seed0_source_test: 485/486 (99.79%)
+  D_seed0_target_test: 469/469 (100.00%)
+  B_seed1_source_test: 497/498 (99.80%)
+  B_seed1_target_test: 873/873 (100.00%)
+  C_seed1_source_test: 499/499 (100.00%)
+  C_seed1_target_test: 632/633 (99.84%)
+  D_seed1_source_test: 490/490 (100.00%)
+  D_seed1_target_test: 510/510 (100.00%)
+  B_seed2_source_test: 498/498 (100.00%)
+  B_seed2_target_test: 869/870 (99.89%)
+  C_seed2_source_test: 497/498 (99.80%)
+  C_seed2_target_test: 538/539 (99.81%)
+  D_seed2_source_test: 495/496 (99.80%)
+  D_seed2_target_test: 443/443 (100.00%)
+
+Wrote summary to /workspace/qwen_cross_domain_prompt_adaptation/results/binary_label_scoring/metrics/summary.json

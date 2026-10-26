@@ -1,0 +1,110 @@
+{
+  "condition": "D",
+  "seed": 2,
+  "instruction": "Determine if the text expresses a favorable or unfavorable opinion about the subject being discussed. Respond with exactly one word: positive or negative.",
+  "demonstration_ids": [
+    "imdb_train_10776",
+    "imdb_train_14452",
+    "imdb_train_12045",
+    "imdb_train_19432"
+  ],
+  "source_test": {
+    "metrics": {
+      "n": 500,
+      "accuracy": 0.942,
+      "macro_f1": 0.941999767999072,
+      "macro_precision": 0.9420070721131538,
+      "macro_recall": 0.942,
+      "per_class": {
+        "negative": {
+          "precision": 0.9437751004016064,
+          "recall": 0.94,
+          "f1": 0.9418837675350702,
+          "support": 250
+        },
+        "positive": {
+          "precision": 0.9402390438247012,
+          "recall": 0.944,
+          "f1": 0.9421157684630739,
+          "support": 250
+        }
+      },
+      "confusion_matrix": {
+        "negative": {
+          "pred_negative": 235,
+          "pred_positive": 15,
+          "pred_invalid": 0
+        },
+        "positive": {
+          "pred_negative": 14,
+          "pred_positive": 236,
+          "pred_invalid": 0
+        }
+      },
+      "invalid_count": 0,
+      "invalid_rate": 0.0
+    },
+    "cost": {
+      "phase": "D_seed2_source_test",
+      "wall_clock_seconds": 125.96082011796534,
+      "model_invocations": 63,
+      "examples_classified": 500,
+      "input_tokens": 1157776,
+      "output_tokens": 1000,
+      "cache_hits": 0,
+      "cache_misses": 500,
+      "peak_allocated_bytes": 18498231296,
+      "peak_reserved_bytes": 20117979136
+    }
+  },
+  "target_test": {
+    "metrics": {
+      "n": 873,
+      "accuracy": 0.9530355097365406,
+      "macro_f1": 0.9484643549801376,
+      "macro_precision": 0.9461926316392597,
+      "macro_recall": 0.9508945631405246,
+      "per_class": {
+        "negative": {
+          "precision": 0.9225806451612903,
+          "recall": 0.9438943894389439,
+          "f1": 0.933115823817292,
+          "support": 303
+        },
+        "positive": {
+          "precision": 0.9698046181172292,
+          "recall": 0.9578947368421052,
+          "f1": 0.9638128861429832,
+          "support": 570
+        }
+      },
+      "confusion_matrix": {
+        "negative": {
+          "pred_negative": 286,
+          "pred_positive": 17,
+          "pred_invalid": 0
+        },
+        "positive": {
+          "pred_negative": 24,
+          "pred_positive": 546,
+          "pred_invalid": 0
+        }
+      },
+      "invalid_count": 0,
+      "invalid_rate": 0.0
+    },
+    "cost": {
+      "phase": "D_seed2_target_test",
+      "wall_clock_seconds": 179.03939894586802,
+      "model_invocations": 110,
+      "examples_classified": 873,
+      "input_tokens": 1737696,
+      "output_tokens": 1746,
+      "cache_hits": 0,
+      "cache_misses": 873,
+      "peak_allocated_bytes": 18205797376,
+      "peak_reserved_bytes": 20117979136
+    }
+  },
+  "wall_clock_seconds_total": 320.8338312525302
+}

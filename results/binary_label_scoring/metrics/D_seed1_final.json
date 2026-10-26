@@ -1,0 +1,110 @@
+{
+  "condition": "D",
+  "seed": 1,
+  "instruction": "Classify the sentiment of the following text as positive or negative. Respond with exactly one word: positive or negative.",
+  "demonstration_ids": [
+    "imdb_train_10645",
+    "imdb_train_15009",
+    "imdb_train_9815",
+    "imdb_train_23934"
+  ],
+  "source_test": {
+    "metrics": {
+      "n": 500,
+      "accuracy": 0.952,
+      "macro_f1": 0.9519877088534665,
+      "macro_precision": 0.9524633224421808,
+      "macro_recall": 0.952,
+      "per_class": {
+        "negative": {
+          "precision": 0.937984496124031,
+          "recall": 0.968,
+          "f1": 0.952755905511811,
+          "support": 250
+        },
+        "positive": {
+          "precision": 0.9669421487603306,
+          "recall": 0.936,
+          "f1": 0.9512195121951219,
+          "support": 250
+        }
+      },
+      "confusion_matrix": {
+        "negative": {
+          "pred_negative": 242,
+          "pred_positive": 8,
+          "pred_invalid": 0
+        },
+        "positive": {
+          "pred_negative": 16,
+          "pred_positive": 234,
+          "pred_invalid": 0
+        }
+      },
+      "invalid_count": 0,
+      "invalid_rate": 0.0
+    },
+    "cost": {
+      "phase": "D_seed1_source_test",
+      "wall_clock_seconds": 123.33963885344565,
+      "model_invocations": 63,
+      "examples_classified": 500,
+      "input_tokens": 1124776,
+      "output_tokens": 1000,
+      "cache_hits": 0,
+      "cache_misses": 500,
+      "peak_allocated_bytes": 18440194560,
+      "peak_reserved_bytes": 20117979136
+    }
+  },
+  "target_test": {
+    "metrics": {
+      "n": 873,
+      "accuracy": 0.9473081328751431,
+      "macro_f1": 0.9434871939206304,
+      "macro_precision": 0.9344875955773144,
+      "macro_recall": 0.957330206704881,
+      "per_class": {
+        "negative": {
+          "precision": 0.8746355685131195,
+          "recall": 0.9900990099009901,
+          "f1": 0.9287925696594427,
+          "support": 303
+        },
+        "positive": {
+          "precision": 0.9943396226415094,
+          "recall": 0.9245614035087719,
+          "f1": 0.9581818181818181,
+          "support": 570
+        }
+      },
+      "confusion_matrix": {
+        "negative": {
+          "pred_negative": 300,
+          "pred_positive": 3,
+          "pred_invalid": 0
+        },
+        "positive": {
+          "pred_negative": 43,
+          "pred_positive": 527,
+          "pred_invalid": 0
+        }
+      },
+      "invalid_count": 0,
+      "invalid_rate": 0.0
+    },
+    "cost": {
+      "phase": "D_seed1_target_test",
+      "wall_clock_seconds": 171.97421923279762,
+      "model_invocations": 110,
+      "examples_classified": 873,
+      "input_tokens": 1680078,
+      "output_tokens": 1746,
+      "cache_hits": 0,
+      "cache_misses": 873,
+      "peak_allocated_bytes": 18148192768,
+      "peak_reserved_bytes": 20117979136
+    }
+  },
+  "wall_clock_seconds_total": 310.62218245491385
+}
