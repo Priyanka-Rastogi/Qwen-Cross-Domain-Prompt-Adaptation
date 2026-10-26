@@ -117,17 +117,30 @@ src/
   cache.py               resumable JSONL evaluation cache
   run_experiment.py     orchestrates A-D across seeds, incremental + resumable
   generate_report.py    renders results/metrics/summary.json -> results/report.md
+  score_labels.py        binary-label (positive/negative) conditional-likelihood
+                          scoring: scoring rule, tokenization verification, tie-break
+  run_binary_scoring.py  orchestrates binary-label scoring over the same frozen
+                          A-D prompts/seeds as run_experiment.py
+  verify_binary_scoring.py  independent audit of the scoring implementation
+                             (live-model cross-checks, recomputed metrics, isolation)
+  audit_comparison_table.py  from-scratch recomputation of both interfaces' metrics
+                              directly from prediction CSVs (comparison-table audit)
 tests/               pytest unit tests (no GPU required)
 artifacts/
   manifests/           data_manifest.json (splits, hashes, provenance)
   instructions/        per-seed proposal prompts + raw generations + accepted pool
   selected_prompts/    frozen B/C/D configs (hash + timestamp) before final eval
-  cache/                eval_cache.jsonl / smoke_cache.jsonl
+  cache/                eval_cache.jsonl / smoke_cache.jsonl (gitignored)
 results/
   predictions/          per-example predictions (one row per classified example)
   metrics/              per-condition/seed metrics + summary.json
   logs/                 run_log.jsonl, phase_costs.json
-  report.md             human-readable final report
+  report.md             human-readable final report (free generation)
+  binary_label_scoring/  predictions/metrics/logs for the binary-scoring interface,
+                          plus metric_verification.md (independent audit) and
+                          near_tie_sensitivity.csv (batch-order-noise bound)
+  comparison_audit/     from-scratch re-derivation of both interfaces' metrics,
+                         with per-seed TP/FP/FN tables, from audit_comparison_table.py
 data/
   *.csv, DATASET_README.md, raw_extract/ (Financial PhraseBank raw archive)
 ```
@@ -161,6 +174,71 @@ PYTHONPATH=src python src/run_experiment.py --config configs/pilot.yaml --resume
 # 7. Regenerate the report from existing results
 PYTHONPATH=src python src/generate_report.py --results-dir results
 ```
+
+## Binary-label scoring: a second prediction interface on the same frozen prompts
+
+The experiment above (free generation + strict parsing, `src/evaluate.py`)
+sometimes lets the model emit something other than "positive"/"negative"
+(mostly "neutral"-like text under conditions C/D on the financial target
+domain); those get recorded as invalid and counted against accuracy
+(`src/metrics.py`, `INVALID_PRED = -1`). At the request to see results using
+only the two labels positive/negative, `src/score_labels.py` +
+`src/run_binary_scoring.py` implement a **second, separate prediction
+interface** on the exact same frozen model, instructions, demonstrations, and
+seeds already selected above (hashes re-verified against
+`artifacts/selected_prompts/*.json` before scoring) -- no prompt re-search, no
+fine-tuning, no new data. Instead of greedy decoding, each example's label is
+the argmax of the two candidate labels' teacher-forced log-likelihoods under
+the identical chat-template prompt (scoring rule, tokenization-boundary
+verification, and deterministic tie-break documented in
+`src/score_labels.py`'s module docstring). Because the prediction is always
+one of exactly two labels by construction, there is no invalid-output
+category under this interface.
+
+**Results** (accuracy / macro-F1; B/C/D are mean over 3 seeds, A is
+seed-invariant; full per-seed tables in `results/binary_label_scoring/` and
+`results/comparison_audit/`):
+
+| Condition | Domain | Free generation | Binary-label scoring |
+|---|---|---|---|
+| A | source (movie) | 0.922 / 0.923 | 0.924 / 0.924 |
+| A | target (finance) | 0.978 / 0.976 | 0.978 / 0.976 |
+| B | source | 0.923 / 0.924 | 0.924 / 0.924 |
+| B | target | 0.981 / 0.980 | 0.981 / 0.980 |
+| C | source | 0.931 / 0.933 | 0.935 / 0.935 |
+| C | target | 0.614 / 0.761 | 0.921 / 0.917 |
+| D | source | 0.932 / 0.941 | 0.948 / 0.948 |
+| D | target | 0.527 / 0.702 | 0.952 / 0.948 |
+
+**How to read this.** On the source domain, the two interfaces agree closely
+everywhere. The large C/D target-domain gap is **not** evidence that
+likelihood scoring makes the model better at the underlying task -- free
+generation's low C/D target accuracy was driven almost entirely by a large
+invalid-output rate (35%/46%, see `results/invalid_output_diagnostics.md`),
+and binary scoring mechanically removes that escape hatch. The jump is
+substantially attributable to resolving previously-invalid cases, not to a
+change in the model's underlying label preferences on cases it was already
+answering validly (confirmed directly: `full_scale_agreement_check` in
+`results/binary_label_scoring/logs/` shows ~99.8-100% agreement between the
+two interfaces on every example where free generation *did* already produce a
+valid single-token answer). Finance-set analysis beyond these aggregate
+numbers is exploratory, not confirmatory -- it was not used to select any
+setting.
+
+**Verification.** `results/binary_label_scoring/metric_verification.md`
+documents a full independent audit: a real bug (missing `position_ids` for
+left-padded batched scoring, which made scores batch-order-dependent) was
+found and fixed before any results were reported, with the entire first
+(buggy) run deleted and re-run from scratch -- see that file for the before/
+after evidence. The audit also found and bounded a narrower, inherent bf16
+batched-inference limitation (not a logic bug): ~1.4% of predictions sit
+close enough to their decision boundary that the predicted label can depend
+on batch composition, bounded at <=2.18 percentage points of accuracy on any
+single condition/domain. `results/comparison_audit/` separately re-derives
+every free-generation and binary-scoring number directly from the raw
+prediction CSVs (not by calling `src/metrics.py`) and confirms exact
+agreement with the saved results -- see `comparison_audit_report.md` for the
+full TP/FP/FN breakdown per seed.
 
 ## Negative results are valid
 
