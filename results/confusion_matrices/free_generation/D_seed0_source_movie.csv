@@ -1,0 +1,3 @@
+label,positive,negative,neutral,other_invalid
+positive,232,11,4,3
+negative,12,231,5,2
